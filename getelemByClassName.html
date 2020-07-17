@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Get Element By Tag Name</title>
+        <script type="text/javascript">
+        function changestyling()
+        {
+                //Difference between tagnam and class is that in tag name we can get collection of particular tags, but in class we can get irespecive of type of tag 
+            var element=document.getElementsByClassName("mypara");
+            
+            for(var x=0;x<element.length;x++)
+            {
+                element[x].style.fontWeight="bold";
+            }
+
+
+          
+        }
+       
+
+        </script>
+    </head>
+    <body>
+        <p id="p1" class="mypara">This is a paragraph 1</p>
+        <p class="mypara">This is a paragraph 2</p>
+        <p class="mypara">This is a paragraph 3</p>
+        <br><br>
+        <button onclick="changestyling()">Click Here to change styling</button>
+
+      
+    </body>
+</html>

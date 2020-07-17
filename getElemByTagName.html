@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Get Element By Tag Name</title>
+        <script type="text/javascript">
+        function changestyling()
+        {
+    
+            var para=document.getElementsByTagName("p");
+
+            for(var i=0;i<para.length;i++)
+            {
+                para[i].style.color="red";
+            }
+        }
+       
+
+        </script>
+    </head>
+    <body>
+        <p>This is a paragraph 1</p>
+        <p>This is a paragraph 2</p>
+        <p>This is a paragraph 3</p>
+        <p>This is a paragraph 4</p>
+        <p>This is a paragraph 5</p>
+        <br><br>
+        <button onclick="changestyling()">Click Here to change styling</button>
+
+      
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form validation</title>
+        <script type="text/javascript">
+
+        function validate()
+        {
+            var uname=document.getElementById("uname");
+            var password=document.getElementById("pass");
+
+            if(uname.value.trim()=="")
+            {
+               // alert("Field cannot me left blank");
+               uname.style.border="solid 3px firebrick";
+               document.getElementById("lbluser").style.visibility="visible";
+                return false;
+
+            }
+            else if(password.value.trim()=="")
+            {
+                alert("Blank Password");
+                return false;
+            }
+            else if(password.value.trim().length<=5){
+                alert("password too short");
+                return false;
+            }
+            else
+            {
+                    return true;
+            }
+        }
+      
+       
+
+        </script>
+    </head>
+    <body>
+        <form action="FormValidMsg.html" onsubmit=" return validate()">
+            <input id="uname" placeholder="Username" type="text" />
+            <label id="lbluser" style="color: firebrick;visibility: hidden;">Invalid</label>
+            <br><br><br>
+
+            <input id="pass" placeholder="Password" type="password" /><br><br><br>
+
+            <button  type="submit">Submit</button>
+
+
+        </form>      
+    </body>
+</html>

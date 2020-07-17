@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Get Element By Tag Name</title>
+        <script type="text/javascript">
+
+        function validate()
+        {
+            var text=document.getElementById("text").value;
+            var regx=/^[6-9]\d{9}$/;
+
+            if(regx.test(text))
+            {
+                document.getElementById("lbluser").innerHTML="Valid";
+                document.getElementById("lbluser").style.visibility="visible";
+                document.getElementById("lbluser").style.color="green";
+
+            }
+            else{
+                document.getElementById("lbluser").innerHTML="Invalid";
+                document.getElementById("lbluser").style.visibility="visible";
+                document.getElementById("lbluser").style.color="red";
+
+            }
+        }
+
+    
+
+        </script>
+    </head>
+    <body>
+        <form action="FormValidMsg.html">
+            <input id="text" placeholder="Mobile Number" type="text" />
+            <label id="lbluser" style="color: firebrick;visibility: hidden;">Invalid Username</label>
+            <br><br><br>
+
+            <button type="button" onclick="validate()">Submit</button>
+        </form>
+
+    </body>
+</html>

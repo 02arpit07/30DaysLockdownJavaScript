@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Get Element By Tag Name</title>
+        <script type="text/javascript">
+        function setNewImage()
+        {
+              document.getElementById("img1").src="images/arpit2.jpg";
+        }
+        function setOld()
+        {
+            document.getElementById("img1").src="images/arpit1.jpg";
+        }
+       
+
+        </script>
+    </head>
+    <body>
+        <img id="img1" onmouseover="setNewImage()" onmouseout="setOld()" src="images/arpit1.jpg" width="400"/>
+      
+    </body>
+</html>

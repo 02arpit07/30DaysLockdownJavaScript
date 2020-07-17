@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Get Element By Tag Name</title>
+        <script type="text/javascript">
+
+        function validate()
+        {
+            var username=document.getElementById("uname").value;
+            //var regx= /E00/i;
+
+            //object oriented way of creating regex is
+            //regexx=new RegExp("arpit","i");
+
+            //alphatbets in square braackets are called character set
+            var regx=/[sdp]imple/;
+            //var regx=/[a-x]00/;
+            //var regx=/[a-x A-X]00/;
+          //var regx=/[0-5]abc/;
+          //var regx=/[0-5]a[6-9][a-z]/;
+          
+          //How to exclude something
+          //var regx=/[^a-c]abc/;
+
+            if(regx.test(username))
+            {
+                alert("valid username");
+                document.getElementById("lbluser").style.visibility="hidden";
+            }
+            else{
+                document.getElementById("lbluser").style.visibility="visible";
+                
+            }
+
+        }
+
+       
+       
+
+        </script>
+    </head>
+    <body>
+        <form action="FormValidMsg.html">
+            <input id="uname" placeholder="Username" type="text" />
+            <label id="lbluser" style="color: firebrick;visibility: hidden;">Invalid Username</label>
+            <br><br><br>
+
+            <button type="button" onclick="validate()">Submit</button>
+        </form>
+
+    </body>
+</html>
